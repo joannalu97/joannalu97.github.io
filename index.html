@@ -14,7 +14,7 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="index.html" class="logo"><strong>University of Waterloo</strong> 3A Double Major in Computer Science and Statistics</a>
+					<a href="index.html" class="logo"><strong>Student @ the University of Waterloo</strong> - 3A Double Major in Computer Science and Statistics</a>
 					<nav id="nav">
 						<a href="index.html">Home</a>
 						<a href="Joanna_Lu_Resume.pdf">Resume</a>
@@ -98,27 +98,30 @@
 			<footer id="footer">
 				<div class="inner">
 
-					<h3>Get in touch</h3>
+					<h3>Get in touch!</h3>
 
-					<form action="#" method="post">
+					<form name="gform" id="gform" enctype="text/plain" action="https://goo.gl/forms/heZNDPLxqspvLCq33" target="hidden_iframe" onsubmit="submitted=true;" method="post">
 
 						<div class="field half first">
 							<label for="name">Name</label>
-							<input name="name" id="name" type="text" placeholder="Name">
+							<input name="entry.386030222" id="entry.386030222" type="text" placeholder="Name">
 						</div>
 						<div class="field half">
 							<label for="email">Email</label>
-							<input name="email" id="email" type="email" placeholder="Email">
+							<input name="entry.583243910" id="entry.583243910" type="email" placeholder="Email">
 						</div>
 						<div class="field">
 							<label for="message">Message</label>
-							<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+							<textarea name="entry.300579022" id="entry.300579022" rows="6" placeholder="Message"></textarea>
 						</div>
 						<ul class="actions">
 							<li><input value="Send Message" class="button alt" type="submit"></li>
 						</ul>
 					</form>
+					
+					<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 
+					
 					<div class="copyright">
 						&copy; Untitled. Design: Joanna Lu.
 					</div>
@@ -131,6 +134,12 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script type="text/javascript">var submitted=false;</script>
+			<script type="text/javascript">
+			$('#gform').on('submit', function(e) {
+ 			 $('#gform *').fadeOut(2000);
+  			$('#gform').prepend('Your submission has been processed...');
+ 			 });
+			</script>
 	</body>
 </html>
