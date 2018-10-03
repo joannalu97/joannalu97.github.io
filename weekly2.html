@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>Kaggle - Titanic</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>weekly2</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11782,7 +11782,7 @@ div#notebook {
 <p>Jupyter is typically installed on your machine using Anaconda (helps manages packages, notebooks etc.) so that you can locally host your own notebooks. For the purpose of this tutorial, the University of Waterloo hosts user servers for us to use Jupyter Notebooks with.</p>
 <h3 id="Instructions:">Instructions:<a class="anchor-link" href="#Instructions:">&#182;</a></h3><ol>
 <li>Login at <a href="https://jupyter.math.uwaterloo.ca/">https://jupyter.math.uwaterloo.ca/</a></li>
-<li>Select <code>Python 2</code> as the language.</li>
+<li>Select <code>Python 3</code> as the language.</li>
 <li>Test everything works, by typing in:</li>
 </ol>
 
@@ -11795,7 +11795,7 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-    <span class="k">print</span> <span class="s1">&#39;Joanna&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s1">&#39;Joanna&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -11934,8 +11934,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./all/train.csv&#39;</span><span class="p">)</span>
-<span class="n">test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./all/test.csv&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./train.csv&#39;</span><span class="p">)</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./test.csv&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -11957,7 +11957,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="n">train</span><span class="o">.</span><span class="n">shape</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">train</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 
 </div>
@@ -12249,7 +12249,7 @@ div#notebook {
 <span class="k">for</span> <span class="n">dataset</span> <span class="ow">in</span> <span class="p">[</span><span class="n">train</span><span class="p">,</span> <span class="n">test</span><span class="p">]:</span>
     <span class="n">age_avg</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
     <span class="n">age_std</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
-    <span class="k">print</span> <span class="n">age_avg</span>
+    <span class="k">print</span> <span class="p">(</span><span class="n">age_avg</span><span class="p">)</span>
     <span class="n">age_null_count</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
     
     <span class="n">age_null_random_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">age_avg</span> <span class="o">-</span> <span class="n">age_std</span><span class="p">,</span> <span class="n">age_avg</span> <span class="o">+</span> <span class="n">age_std</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">age_null_count</span><span class="p">)</span>
@@ -12402,6 +12402,16 @@ div#notebook {
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Step-2:-Creating-our-classifier">Step 2: Creating our classifier<a class="anchor-link" href="#Step-2:-Creating-our-classifier">&#182;</a></h3><h4 id="Decision-Tree-Classifier">Decision Tree Classifier<a class="anchor-link" href="#Decision-Tree-Classifier">&#182;</a></h4><p>We create our decision tree classifier by fitting in the data accordingly and then checking how accurate our model is using the original test data</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
@@ -12418,6 +12428,15 @@ div#notebook {
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Logistic-Regression">Logistic Regression<a class="anchor-link" href="#Logistic-Regression">&#182;</a></h4>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -12441,7 +12460,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Adding-Features">Adding Features<a class="anchor-link" href="#Adding-Features">&#182;</a></h3><p>What if we add Age as a feature of consideration?</p>
+<h3 id="Step-3.-Adding-Features-to-our-model">Step 3. Adding Features to our model<a class="anchor-link" href="#Step-3.-Adding-Features-to-our-model">&#182;</a></h3><p>What if we add age as a feature of consideration?</p>
 
 </div>
 </div>
@@ -12502,6 +12521,15 @@ div#notebook {
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="7.-Submission">7. Submission<a class="anchor-link" href="#7.-Submission">&#182;</a></h1>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
